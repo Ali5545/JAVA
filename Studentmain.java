@@ -11,19 +11,19 @@ public class Studentmain {
 		this.grade=grade;
 		this.gpa=gpa;
 	}
-	public String getname()
+	public String getName()
 	{
 		String name;
 		name = studentname;
 		return name;
 	}
-	public int getgrade()
+	public int getGrade()
 	{
 		int gradelvl;
 		gradelvl= grade;
 		return gradelvl;
 	}
-	public double getgpa()
+	public double getGpa()
 	{
 		double GPA;
 		GPA=gpa;
@@ -32,31 +32,34 @@ public class Studentmain {
 	public void promote()
 	{
 		grade++;
-		System.out.println(getname() + " has been promoted to "+ grade+ ".");
+		System.out.println(getName() + " has been promoted to "+ grade+ ".");
 	}
 	public boolean ishonorroll()
 	{
 		return gpa>=3.5;
 	}
+	public void honorrollstat()
+	{
+		if (ishonorroll())
+		{
+			System.out.println("Honor Roll: Yes");
+		} 
+		else {
+			System.out.println("Honor Roll: No");
+		}
+	}
 	public void updategpa(double average)
 	{
 		double update=(average/100)*4;
-		System.out.println(getname()+"'s GPA has been updated to:"+ gpa);
+		System.out.println(getName()+"'s GPA has been updated to:"+ update);
 	}
 	public void printinfo()
 	{
-        System.out.println("Name      : " + getname());
-        System.out.println("Grade     : " + getgrade());
-        System.out.println("GPA (4.0 scale) : " + getgpa());
+        System.out.println("Name      : " + getName());
+        System.out.println("Grade     : " + getGrade());
+        System.out.println("GPA (4.0 scale) : " + getGpa());
         System.out.println("Honor roll: "+ ishonorroll());
         System.out.println("--------------------------------------------------");
 	}
-	public class StudentMenu {
-	    public StudentMenu() {
-	    	String title = "\n\t*** Welcome to the Student Tracker System ***\n";
-	        String line = "\t----------------------------------------------\n";
-	        String menu = "\t1. Show Student Details\n\t2. Promote Student\n\t3. Update GPA\n\t4. Exit\n";
-	    //for the escapes (for the option
-	    }
-
+	
 }
