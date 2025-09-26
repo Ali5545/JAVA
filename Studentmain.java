@@ -48,12 +48,12 @@ public class Studentmain {
 			System.out.println("Honor Roll: No");
 		}
 	}
-	public void updategpa(double average)
+	public void updateGpa(double average)
 	{
-		double update=(average/100)*4;
-		System.out.println(getName()+"'s GPA has been updated to:"+ update);
+		gpa=(average/100)*4;
+		System.out.println(getName()+"'s GPA has been updated to:"+ gpa);
 	}
-	public void printinfo()
+	public void printInfo()
 	{
         System.out.println("Name      : " + getName());
         System.out.println("Grade     : " + getGrade());
