@@ -34,7 +34,7 @@ public class Airplane {
 	{
 		this.altitude = altitude +1000;
 	}
-	public void loseAlt(int altitude)
+	public void loseAlt(int altitude) //need to check this 
 	{
 		if (altitude < 0)
 		{
@@ -42,7 +42,7 @@ public class Airplane {
 		}
 		this.altitude= altitude - 1000;
 	}
-	public int getAlt(Airplane other)
+	public int getAlt(Airplane other) //need to check this
 	{
 		int difference= this.altitude - other.altitude;
 		return Math.abs(difference);
@@ -63,3 +63,4 @@ public class Airplane {
 	}
 
 }
+
