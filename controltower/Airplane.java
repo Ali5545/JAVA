@@ -30,21 +30,21 @@ public class Airplane {
 		distance= Math.sqrt(Math.pow(x, 2)+ Math.pow(y, 2)); //convert all those x and y coordinate back to distance by using pythagorean theorem
 		bearing= (int) Math.round((Math.toDegrees(Math.atan2(x, y))+360)%360);
 	}
-	public void gainAlt(int altitude)
+	public void gainAlt(int alt)
 	{
-		this.altitude = altitude +1000;
+		altitude += 1000;
 	}
-	public void loseAlt(int altitude) //need to check this 
+	public void loseAlt(int alt) //need to check this 
 	{
+		altitude-= 1000;
 		if (altitude < 0)
 		{
 			this.altitude = 0;
 		}
-		this.altitude= altitude - 1000;
 	}
 	public int getAlt(Airplane other) //need to check this
 	{
-		int difference= this.altitude - other.altitude;
+		int difference= altitude - other.altitude;
 		return Math.abs(difference);
 	}
 	public double distTo(Airplane other) {
