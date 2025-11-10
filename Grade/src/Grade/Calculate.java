@@ -58,3 +58,21 @@ public class Calculate {
 		
 	}
 }
+
+
+
+
+
+public class Calcforloop {
+static Scanner input= new Scanner(System.in);
+	
+	public Calcforloop(int NumGrades)
+	{
+		int count=0;
+		double total=0;
+		System.out.print("im here");
+		for (int i = 1; i <= NumGrades; i++)
+		{
+			System.out.println("Enter grade " + (count+1)+": " );
+			double grade= input.nextDouble();
+
