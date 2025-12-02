@@ -37,10 +37,10 @@ public class ArrayChar extends MainProgram{
 		}
 		else
 		{
-			char[] wordarray= new char[wordlen];
+			char[] wordarray= new char[wordlen];  //sets an array on length 
 			for(int i=0; i<wordlen; i++)
 			{
-				wordarray[i]=entword.charAt(i);
+				wordarray[i]=entword.charAt(i); //check if the string is in lowercase
 				if((int)wordarray[i] <= 96 || (int)wordarray[i] >= 123)
 				{
 					System.out.print(wordarray[i]+" is not a letter!\n");
@@ -49,7 +49,7 @@ public class ArrayChar extends MainProgram{
 				{
 					System.out.print(wordarray[i]+ " Is a letter!\n");
 					
-					for (int x = 0; letternum>x; x++)
+					for (int x = 0; letternum>x; x++) //prints out a letter n amount of times 
 					{
 						System.out.println(wordarray[i]);
 					}
@@ -59,3 +59,4 @@ public class ArrayChar extends MainProgram{
 	}
 
 }
+
